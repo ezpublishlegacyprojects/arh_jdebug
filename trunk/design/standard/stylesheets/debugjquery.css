@@ -1,0 +1,81 @@
+/********************************************/
+/*  style menu debug
+/********************************************/
+
+#menuDebug{
+	background: url("../images/bgDebug.jpg") repeat-x;
+	height: 25px;
+	float:left;
+	position: fixed;
+	left:5px;
+	top: 5px;
+}
+
+#menuDebug ul{
+	margin:0 !important;
+	float: left;
+}
+
+#menuDebug > a{
+	float: left;
+	padding:5px;
+}
+
+#menuDebug ul li{
+	background-image: none !important;
+	list-style: none !important;
+	float:left;
+	padding: 5px;
+}
+
+#menuDebug ul li a{
+	text-decoration: none;
+	color: black;
+}
+#menuDebug ul li a:hover, .menuDebugSelected{
+	color: red !important;
+}
+#menuDebug ul li a img{
+	margin-top: -3px;
+}
+/********************************************/
+/*  style pour les icones
+/********************************************/
+#timingLi{
+	}
+/********************************************/
+/*  style pour le debug
+/********************************************/
+#debug{
+	position: fixed;
+	left:5px;
+	top: 5px;
+	z-index:10000;
+	overflow-y: scroll;
+	min-height: 400px;
+	height: 400px !important;
+	height: 400px;
+	background: white;
+}
+.sizeNull{
+	width:0 !important;
+	height:0 !important;
+}
+#errorsDebug{
+	width: 800px;
+}
+#debug table{
+	border: none !important;
+}
+#templateusage, #timeaccumulators, #timingpoints, #httpVariables, #errorsDebug {
+	margin: 5px  10px;
+}
+/********************************************/
+/*  style pour le debug des erreurs
+/********************************************/
+#filterErrors li{
+	background-image: none !important;
+	list-style: none !important;
+	float:left;
+	padding: 5px;
+}
