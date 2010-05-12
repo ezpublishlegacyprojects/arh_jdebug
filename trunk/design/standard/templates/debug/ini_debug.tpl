@@ -15,11 +15,23 @@ Description : Template for debug width jquery
 TODO :
 
 -----------------------------------------*}
+{* dont work with cache 
+
+{ezcss_require( array( 'debug.css', 'debugjquery.css' ) )}
+
+{ezscript_require( array('jquery-1.3.2.min.js', 'debugjquery.js') )}
+
+*}
+
 <!-- insert css and javascript -->
 <style type="text/css">
-@import url({"stylesheets/debugjquery.css"|ezdesign()});
+	@import url({"stylesheets/debugjquery.css"|ezdesign()});
 </style>
-
+<script type="text/javascript">
+	var close = {cond(ezpreference( 'close' ), ezpreference( 'close' ), 'false')};
+	var defaultOutput = '{ezini('DebugJquerySettings', 'DefaultOutput', 'debugjquery.ini'))}';
+	var url_ezpreference = {'user/preferences/set'|ezurl()};
+</script>
 <script src={"javascript/jquery-1.3.2.min.js"|ezdesign()} type="text/javascript" language="JavaScript"></script>
 <script src={"javascript/debugjquery.js"|ezdesign()} type="text/javascript" language="JavaScript"></script>
 
@@ -122,15 +134,22 @@ TODO :
 	    			<li>
 	    				<a href="#" rel="Error:">Errors</a>
 	    			</li>
-	    			<li>
+	    			<!-- li>
 						<img src={"images/separateurDebugMenu.jpg"|ezdesign()} alt="Separator" />
 					</li>
 	    			<li>
-	    				<a href="#" rel="eZMySQLDB::query">SQL</a>
+	    				<a href="#" rel="Notice: eZMySQLDB">SQL</a>
+	    			</li -->
+	    			<li>
+						<img src={"images/separateurDebugMenu.jpg"|ezdesign()} alt="Separator" />
+					</li>
+					<li>
+	    				<a href="#" rel="Warning:">Warning</a>
 	    			</li>
-	    			<li>
+					<li>
 						<img src={"images/separateurDebugMenu.jpg"|ezdesign()} alt="Separator" />
 					</li>
+					
 	    			<li>
 	    				<a href="#" rel="Notice:">Notice</a>
 	    			</li>
